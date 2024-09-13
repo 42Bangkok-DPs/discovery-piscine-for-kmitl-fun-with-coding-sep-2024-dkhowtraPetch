@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Basic Calculator</title>
+        <style>
+           body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000000;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+        }
+        .calculator {
+            background-color: #1c1c1c;
+            padding: 20px;
+            border-radius: 10px;
+            width: 280px;
+            text-align: center;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
+        }
+        input[type="text"], select, input[type="submit"] {
+            display: block;
+            margin-bottom: 10px;
+            padding: 12px;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 16px;
+            border: 2px solid #ffffff;
+            border-radius: 0px;
+            background-color: #333333;
+            color: #ffffff;
+        }
+        input[type="submit"] {
+            background-color: #ffffff;
+            color: #000000;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #cccccc;
+        }
+        </style>
+    </head>
+<body>
+    <div class="calculator">
+        <input type="text" id="left" min="0" placeholder="Enter first number">
+        <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+        <input type="text" id="right" min="0" placeholder="Enter second number">
+        <input type="submit" value="Calculate!" onclick="calculate()">
+    </div>
+    
+    <script>
+        function calculate() {
+            const leftstr = parseInt(document.getElementById('left').value);
+            const operator = document.getElementById('operator').value;
+            const rightstr = parseInt(document.getElementById('right').value);
+            
+            const left = parseFloat(leftstr);
+            const right = parseFloat(rightstr);
+
+            if (isNaN(left) || isNaN(right) || left < 0 || right < 0) {
+                alert('Error :(');
+                console.log('Error :(');
+                return;
+            }
+    
+            if ((operator === '/' || operator === '%') && right === 0) {
+                alert("It's over 9000!");
+                console.log("It's over 9000!");
+                return;
+            }
+    
+            let result;
+            switch (operator) {
+                case '+':
+                    result = left + right;
+                    break;
+                case '-':
+                    result = left - right;
+                    break;
+                case '*':
+                    result = left * right;
+                    break;
+                case '/':
+                    result = left / right;
+                    break;
+                case '%':
+                    result = left % right;
+                    break;
+            }
+    
+            alert('Result: ' + result);
+            console.log('Result :', result);
+        }
+
+        setInterval(function() {
+            alert('Please, use me...');
+        }, 30000);
+
+    </script>
+</body>
+</html>
