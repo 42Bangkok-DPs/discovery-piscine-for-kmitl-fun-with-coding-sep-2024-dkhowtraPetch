@@ -1,0 +1,66 @@
+.portfolio-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgba(10, 10, 10, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    max-width: 600px;
+    width: 100%;
+    margin: 20px;
+}
+
+.portfolio-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10%;
+    margin-bottom: auto;
+}
+
+.portfolio-container h1 {
+    font-size: 30px;
+    margin-bottom: auto;
+    color: #f1faee;
+}
+
+.portfolio-container h2 {
+    font-size: 20px;
+    margin-bottom: auto;
+    color: #03f54c;
+}
+
+.portfolio-container p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* Project Section */
+.projects {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 45%;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 2%;
+}
+
+.project h3 {
+    color: #f1faee;
+    font-size: 15px;
+    margin-bottom: 4px;
+}

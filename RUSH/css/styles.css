@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    font-family: 'Mitr', sans-serif;
+    background: linear-gradient(145deg, #102a43, #243b53, #01eb72, #192583); 
+    background-size: 200% 200%;
+    animation: bgMove 15s ease infinite;
+    color: #c9d1d3;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+/* Navigation Bar */
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #495057; 
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+}
+
+.navbar li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.navbar li a {
+    display: inline-block;
+    color: #f1faee;
+    text-align: center;
+    padding: 6px 10px;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background-color 0.3s;
+}
+
+.navbar li a i {
+    margin-right: 4px; 
+}
+
+.navbar li a:hover {
+    background-color: #6c757d;
+}
+
+/* Background Animation */
+@keyframes bgMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Main Page Container */
+.container {
+    background: rgba(10, 10, 10, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    width: 85%;
+    max-width: 600px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Main Page Heading */
+.container h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #f1faee;
+}
+
+/* Main Page Paragraph */
+.container p {
+    font-size: 18px;
+    color: #c9d1d3;
+    margin-bottom: 20px;
+}
+
+/* Members Buttons */
+.members {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.member-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 1.2em;
+    color: #f1faee;
+    background-color: #2b6cb0;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.member-btn:hover {
+    background-color: #2c5282;
+    transform: translateY(-2px);
+}
