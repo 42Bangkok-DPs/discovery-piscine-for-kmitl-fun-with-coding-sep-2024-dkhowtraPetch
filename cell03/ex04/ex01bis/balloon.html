@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="bol.css">
+	<style>
+		button{
+    background-color: #E60002;
+    color: black;
+    height: 200px;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    display: flex;
+}
+	</style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <center><button style="text-align: center;" class="btn" onclick="increse()" onmouseout="decrese()"></button></center>
+    <script type="text/javascript">
+        var x = 200;
+        var st = true;
+        var color = ["#C21010","#6BCB77","#293462"]
+        var i = 0;
+        var col = "color"
+        function decrese(){
+            i -= 1;
+            if (i >= 0){
+                document.querySelector("button").style.background = color[i]
+            }
+            else{
+                i = 2;
+                document.querySelector("button").style.background = color[i]
+            }
+
+            if(x>200){
+                x = x-5;
+                document.querySelector("button").style.height = x-5+"px";
+                document.querySelector("button").style.width = x-5+"px";
+                console.log(x,col);
+            
+        }
+          
+        }
+        function increse(){
+            x = x+10;
+            
+            i += 1;
+            if (x > 420){
+                x = 200;
+                col = "red";
+                i = 0;
+                document.querySelector("button").style.background = color[i]
+            } 
+            document.querySelector("button").style.height = x+10+"px";
+            document.querySelector("button").style.width = x+10+"px";
+            console.log(x,col);
+            
+            if (i <= 2){
+                document.querySelector("button").style.background = color[i]
+            }
+            else{
+                i = 0;
+                document.querySelector("button").style.background = color[i]
+            }
+        }
+    
+        
+    </script>
+    
+</body>
+</html>
